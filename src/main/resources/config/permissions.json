@@ -1,0 +1,64 @@
+{
+  "permissions": {
+    "bettertale.admin.config": {
+      "description": "Allows access to Bettertale configuration menus",
+      "default": "op"
+    },
+    "bettertale.servers.menu": {
+      "description": "Allows access to server selection menu",
+      "default": "true"
+    },
+    "bettertale.servers.add": {
+      "description": "Allows adding new servers to the menu",
+      "default": "op"
+    },
+    "bettertale.servers.remove": {
+      "description": "Allows removing servers from the menu",
+      "default": "op"
+    },
+    "bettertale.servers.edit": {
+      "description": "Allows editing server configurations",
+      "default": "op"
+    },
+    "bettertale.events.toggle": {
+      "description": "Allows enabling/disabling event hooks",
+      "default": "op"
+    },
+    "bettertale.reload": {
+      "description": "Allows reloading Bettertale configurations",
+      "default": "op"
+    },
+    "bettertale.command.send": {
+      "description": "Allows using the send command to connect to servers",
+      "default": "op"
+    },
+    "bettertale.command.bettertale": {
+      "description": "Allows using the main Bettertale command",
+      "default": "true"
+    }
+  },
+  "groups": {
+    "admin": {
+      "permissions": [
+        "bettertale.admin.config",
+        "bettertale.servers.add",
+        "bettertale.servers.remove",
+        "bettertale.servers.edit",
+        "bettertale.events.toggle",
+        "bettertale.reload",
+        "bettertale.command.send",
+        "bettertale.command.bettertale",
+        "bettertale.servers.menu"
+      ],
+      "default": false
+    },
+    "player": {
+      "permissions": [
+        "bettertale.servers.menu",
+        "bettertale.command.send",
+        "bettertale.command.bettertale"
+      ],
+      "default": true
+    }
+  }
+}
