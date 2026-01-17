@@ -20,23 +20,36 @@ A minimal, ready-to-use template for creating Hytale plugins with modern build t
 ### Prerequisites
 
 - **Java 25 JDK** - [Download here](https://www.oracle.com/java/technologies/downloads/)
-- **IntelliJ IDEA** - [Download here](https://www.jetbrains.com/idea/download/) (Community Edition is fine)
+- **Eclipse IDE for Java Developers** - [Download here](https://www.eclipse.org/downloads/)
 - **Git** - [Download here](https://git-scm.com/)
 
 ### 1. Clone or Download
 
 ```bash
-git clone https://github.com/yourusername/hytale-plugin-template.git
+git clone https://github.com/bloomsirenix/hytale-plugin-template.git
 cd hytale-plugin-template
 ```
 
 **The template builds immediately without any changes!**  
 You can customize it later when you're ready to develop your plugin.
 
-### 2. Build Immediately (No Changes Needed!)
+### 2. Import into Eclipse
 
-The template works out-of-the-box:
+1. Open Eclipse IDE
+2. File → Import → Gradle → Existing Gradle Project
+3. Browse to your project directory
+4. Select the project and click Finish
+5. Eclipse will automatically import and configure the project
 
+### 3. Build Immediately (No Changes Needed!)
+
+The template works out-of-the-box. You can build using:
+
+**In Eclipse:**
+- Right-click project → Run As → Gradle Build
+- In the Gradle Tasks dialog, select `shadowJar` and click Run
+
+**Or via command line:**
 ```bash
 # Windows
 gradlew.bat shadowJar
@@ -47,7 +60,7 @@ gradlew.bat shadowJar
 
 Your plugin JAR will be in: `build/libs/TemplatePlugin-1.0.0.jar`
 
-### 3. Customize Your Plugin (Optional)
+### 4. Customize Your Plugin (Optional)
 
 When ready to customize, edit these files:
 
@@ -76,7 +89,7 @@ pluginDescription=Your plugin description
 - Rename `src/main/java/com/example/templateplugin/TemplatePlugin.java`
 - Update package name to match your `pluginGroup`
 
-### 4. Build Your Plugin
+### 5. Build Your Plugin
 
 ```bash
 # Windows
@@ -88,7 +101,7 @@ gradlew.bat shadowJar
 
 Your plugin JAR will be in: `build/libs/YourPluginName-1.0.0.jar`
 
-### 5. Implement Your Plugin
+### 6. Implement Your Plugin
 
 Write your plugin code in `src/main/java/`:
 - Commands
@@ -99,8 +112,13 @@ Write your plugin code in `src/main/java/`:
 
 See our [documentation](../Documentation/) for examples and patterns.
 
-### 6. Test Your Plugin (Automated!)
+### 7. Test Your Plugin (Automated!)
 
+**In Eclipse:**
+- Right-click project → Run As → Gradle Build
+- Select `runServer` task and click Run
+
+**Or via command line:**
 ```bash
 # Windows
 gradlew.bat runServer
@@ -180,11 +198,21 @@ rm -rf run/
 
 ### Debugging
 
+**In Eclipse:**
+1. Right-click project → Debug As → Debug Configurations
+2. Create new Gradle Task configuration
+3. Set Task to `runServer` and Arguments to `-Pdebug`
+4. Apply → Debug
+5. Eclipse will connect to the debug session automatically
+
+**Or via command line:**
 ```bash
 # Run server in debug mode
 ./gradlew runServer -Pdebug
 
-# Then connect your IDE debugger to localhost:5005
+# Then connect your Eclipse debugger to localhost:5005
+# Run → Debug Configurations → Remote Java Application → New
+# Set Host: localhost, Port: 5005 → Debug
 ```
 
 ---
@@ -253,10 +281,10 @@ src/main/java/com/yourname/yourplugin/
 └── utils/                   # Utilities
 ```
 
-**See our documentation for examples:**
-- [Getting Started with Plugins](../Documentation/07-getting-started-with-plugins.md)
-- [Advanced Plugin Patterns](../Documentation/12-advanced-plugin-patterns.md)
-- [Common Plugin Features](../Documentation/14-common-plugin-features.md)
+**See bloomsirenix's documentation for examples:**
+- [Getting Started with Plugins](https://github.com/bloomsirenix/hytale-modding/blob/main/Documentation/07-getting-started-with-plugins.md)
+- [Advanced Plugin Patterns](https://github.com/bloomsirenix/hytale-modding/blob/main/Documentation/12-advanced-plugin-patterns.md)
+- [Common Plugin Features](https://github.com/bloomsirenix/hytale-modding/blob/main/Documentation/14-common-plugin-features.md)
 
 ---
 
@@ -328,7 +356,7 @@ GitHub Actions will automatically build and create a release with your plugin JA
 
 For detailed guides on plugin development, see:
 
-- [Hytale Modding Documentation](https://github.com/yourusername/hytale-modding/tree/main/Documentation)
+- [Hytale Modding Documentation](https://github.com/bloomsirenix/hytale-modding/tree/main/Documentation)
 - [Getting Started with Plugins](../Documentation/07-getting-started-with-plugins.md)
 - [Advanced Plugin Patterns](../Documentation/12-advanced-plugin-patterns.md)
 - [Common Plugin Features](../Documentation/14-common-plugin-features.md)
@@ -354,8 +382,8 @@ This template is released under the MIT License. You are free to use it for any 
 
 ## Support
 
-- **Issues:** [GitHub Issues](https://github.com/yourusername/hytale-plugin-template/issues)
-- **Documentation:** [Hytale Modding Docs](https://github.com/yourusername/hytale-modding)
+- **Issues:** [GitHub Issues](https://github.com/bloomsirenix/hytale-plugin-template/issues)
+- **Documentation:** [Hytale Modding Docs](https://github.com/bloomsirenix/hytale-modding)
 - **Community:** Join the Hytale modding community
 
 ---
