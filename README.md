@@ -26,8 +26,8 @@ A minimal, ready-to-use template for creating Hytale plugins with modern build t
 ### 1. Clone or Download
 
 ```bash
-git clone https://github.com/bloomsirenix/hytale-plugin-template.git
-cd hytale-plugin-template
+git clone https://github.com/bloomsirenix/bettertale-template.git
+cd bettertale-template
 ```
 
 **The template builds immediately without any changes!**  
@@ -382,7 +382,7 @@ This template is released under the MIT License. You are free to use it for any 
 
 ## Support
 
-- **Issues:** [GitHub Issues](https://github.com/bloomsirenix/hytale-plugin-template/issues)
+- **Issues:** [GitHub Issues](https://github.com/bloomsirenix/bettertale-template/issues)
 - **Documentation:** [Hytale Modding Docs](https://github.com/bloomsirenix/hytale-modding)
 - **Community:** Join the Hytale modding community
 
