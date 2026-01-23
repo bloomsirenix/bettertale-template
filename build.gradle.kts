@@ -4,21 +4,29 @@ plugins {
     id("run-hytale")
 }
 
-group = findProperty("pluginGroup") as String? ?: "com.example.hytaletemplate"
+group = findProperty("pluginGroup") as String? ?: "com.curseforge.bloomsirenix.btessentials"
 version = findProperty("pluginVersion") as String? ?: "1.0.0"
-description = findProperty("pluginDescription") as String? ?: "Hytale Plugin Template - A starting point for developing Hytale plugins"
+description = findProperty("pluginDescription") as String? ?: "BTEssentials - BetterTale Essentials for Hytale"
 
 repositories {
-    mavenLocal()
     mavenCentral()
+    maven {
+        name = "hytale-release"
+        url = uri("https://maven.hytale.com/release")
+    }
+    maven {
+        name = "hytale-pre-release"
+        url = uri("https://maven.hytale.com/pre-release")
+    }
 }
 
 dependencies {
     // Hytale Server API (provided by server at runtime)
-    compileOnly(files("HytaleServer.jar"))
+    compileOnly("com.hypixel.hytale:Server:2026.01.22-6f8bdbdc4")
     
     // Common dependencies (will be bundled in JAR)
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation("org.yaml:snakeyaml:2.2")
     implementation("org.jetbrains:annotations:24.1.0")
     
     // Test dependencies
@@ -59,11 +67,11 @@ tasks {
     
     // Configure ShadowJar (bundle dependencies)
     shadowJar {
-        archiveBaseName.set("hytaletemplate")
+        archiveBaseName.set("btessentials")
         archiveClassifier.set("")
         
         // Relocate dependencies to avoid conflicts
-        relocate("com.google.gson", "com.example.hytaletemplate.libs.gson")
+        relocate("com.google.gson", "com.curseforge.bloomsirenix.btessentials.libs.gson")
         
         
         // Include manifest.json in root

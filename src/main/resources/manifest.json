@@ -1,17 +1,17 @@
 {
-  "Group": "com.example.hytaletemplate",
-  "Name": "HytaleTemplate", 
+  "Group": "com.curseforge.bloomsirenix.btessentials",
+  "Name": "BTEssentials", 
   "Version": "1.0.0",
-  "Description": "Hytale Plugin Template - A starting point for developing Hytale plugins",
+  "Description": "BTEssentials - BetterTale Essentials for Hytale",
   "Authors": [
     {
-      "Name": "Your Name",
-      "Email": "your.email@example.com", 
-      "Url": "https://github.com/yourusername"
+      "Name": "bloomsirenix",
+      "Email": "bloomsirenix@curseforge.com",
+      "Url": "https://curseforge.com"
     }
   ],
-  "Website": "https://github.com/yourusername/hytaletemplate",
-  "Main": "com.example.hytaletemplate.HytaleTemplatePlugin",
+  "Website": "https://github.com/bloomsirenix",
+  "Main": "com.curseforge.bloomsirenix.btessentials.BTEssentialsPlugin",
   "ServerVersion": "*",
   "Dependencies": {},
   "OptionalDependencies": {},

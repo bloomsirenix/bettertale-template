@@ -35,6 +35,50 @@
     "bettertale.command.bettertale": {
       "description": "Allows using the main Bettertale command",
       "default": "true"
+    },
+    "btessentials.command.towns": {
+      "description": "Allows access to basic town commands",
+      "default": "true"
+    },
+    "btessentials.command.towncreate": {
+      "description": "Allows creating new towns",
+      "default": "true"
+    },
+    "btessentials.command.towninfo": {
+      "description": "Allows viewing town information",
+      "default": "true"
+    },
+    "btessentials.command.townjoin": {
+      "description": "Allows joining towns",
+      "default": "true"
+    },
+    "btessentials.command.townleave": {
+      "description": "Allows leaving towns",
+      "default": "true"
+    },
+    "btessentials.command.towninvite": {
+      "description": "Allows inviting players to town (mayor only)",
+      "default": "op"
+    },
+    "btessentials.command.townkick": {
+      "description": "Allows kicking players from town (mayor only)",
+      "default": "op"
+    },
+    "btessentials.command.towndelete": {
+      "description": "Allows deleting towns (mayor only)",
+      "default": "op"
+    },
+    "btessentials.command.townsetspawn": {
+      "description": "Allows setting town spawn (mayor only)",
+      "default": "op"
+    },
+    "btessentials.command.townspawn": {
+      "description": "Allows teleporting to town spawn (members only)",
+      "default": "true"
+    },
+    "btessentials.command.townperm": {
+      "description": "Allows managing town permissions (mayor only)",
+      "default": "op"
     }
   },
   "groups": {
@@ -48,7 +92,18 @@
         "bettertale.reload",
         "bettertale.command.send",
         "bettertale.command.bettertale",
-        "bettertale.servers.menu"
+        "bettertale.servers.menu",
+        "btessentials.command.towns",
+        "btessentials.command.towncreate",
+        "btessentials.command.towninfo",
+        "btessentials.command.townjoin",
+        "btessentials.command.townleave",
+        "btessentials.command.towninvite",
+        "btessentials.command.townkick",
+        "btessentials.command.towndelete",
+        "btessentials.command.townsetspawn",
+        "btessentials.command.townspawn",
+        "btessentials.command.townperm"
       ],
       "default": false
     },
@@ -56,7 +111,13 @@
       "permissions": [
         "bettertale.servers.menu",
         "bettertale.command.send",
-        "bettertale.command.bettertale"
+        "bettertale.command.bettertale",
+        "btessentials.command.towns",
+        "btessentials.command.towncreate",
+        "btessentials.command.towninfo",
+        "btessentials.command.townjoin",
+        "btessentials.command.townleave",
+        "btessentials.command.townspawn"
       ],
       "default": true
     }
